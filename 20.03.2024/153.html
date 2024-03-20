@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            const image = document.createElement("img")
+            image.src = 'https://images.hdqwalls.com/wallpapers/small-kitten-ba.jpg'
+
+            image.addEventListener("load", () => {
+                document.body.append(image);
+            });
+
+            image.addEventListener("error", () => {
+                alert("Не удалось загрузить изображение");
+            })
+        })
+
+    </script>
+</body>
+</html>
